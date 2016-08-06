@@ -1,0 +1,237 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+There are two-class models.
+ One is discriminative model
+\begin_inset Formula $p(y|x)$
+\end_inset
+
+, and the other is generative model
+\begin_inset Formula $p(x,y)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+There are two ways to label an unkown-label data point.
+ One is maximum likelihood and the other is maximum a posteriori.
+\end_layout
+
+\begin_layout Standard
+Decode: 
+\begin_inset Formula $\hat{x}\sim M\sim x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Prior 
+\begin_inset Formula $p(x)$
+\end_inset
+
+ Model 
+\begin_inset Formula $p(\hat{x}|x)$
+\end_inset
+
+ Posteriori 
+\begin_inset Formula $p(x|\hat{x})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+maximum likelihood:
+\begin_inset Formula $\arg_{\hat{x}}p(\hat{x}|x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+maximum a posteriori:
+\begin_inset Formula $\arg_{\hat{x}}p(x|\hat{x})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+There are two ways to estimate parameters: frequence or Bayesian.
+ 
+\end_layout
+
+\begin_layout Standard
+Frequence: the parameter is fixed.
+ Bayesian: there is a prior on parameter.
+ The difference is discussed clearly in LDA[in my computer].
+\end_layout
+
+\begin_layout Standard
+BM: 
+\begin_inset Formula $E(x)=\frac{1}{2}x^{T}Wx+bx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+GP: 
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+GPC: 
+\begin_inset Formula $y_{m}=f(x),p(y|y_{m})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Generative model:
+\end_layout
+
+\begin_layout Standard
+The prior is Gaussian, 
+\begin_inset Formula $p(z)=N(z|0,I)\qquad p(v|h;\theta)=f_{\theta}(v;h)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Training: 
+\begin_inset Formula $\log p(v)=\log\sum_{h}p(v,h)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+using EM: 
+\begin_inset Formula $\log\sum_{h}p(v,h)\leq\sum_{h}\log p(v,h)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\log p(v,h)=\log p(v|h)+\log p(h)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Standard
+A Gaussian Process can be determinated by 
+\begin_inset Formula $\mu(t)$
+\end_inset
+
+ and 
+\begin_inset Formula $K(s,t)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+GPR: the joint probability distribution represents this GP.
+\end_layout
+
+\begin_layout Standard
+There is no need that encoding function is determinated function in rate-distort
+ion.
+\end_layout
+
+\begin_layout Standard
+What is relationship between translation and rate-distortion? We can definitely
+ say that there is no bijective relation between two languages and nothing
+ can't be expressed by one language.
+\end_layout
+
+\end_body
+\end_document

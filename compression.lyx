@@ -1,0 +1,1000 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+ABSTRACT
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "compression"
+options "plain"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introduction and Related Work
+\end_layout
+
+\begin_layout Standard
+Neural networks are both computationally intensive and memory intensive,
+ xpecially for deep networks.
+ There are some fully-connected(fc) layers in the deep networks.
+ Throught Tab.
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:parameter_models"
+
+\end_inset
+
+ more than 80% parameters exist in fc layers(????).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+percentage of parameters of each layer in all parameter
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:parameter_models"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+vgg
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Simonyan14c"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+alexnet
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+zf
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+conv
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+fc
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.8
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Many researchers
+\begin_inset CommandInset citation
+LatexCommand cite
+key "han2015deep,han2015learning"
+
+\end_inset
+
+ reduce the quanlity of parameters throuth network pruning, quantization
+ and weight sharing.
+ The main idea of network pruning is remove all weigths under some threshold.
+ The main idea of weight sharing is ....
+ and they can reduce more spaces used by weigths through quantization and
+ coding.
+ At test phase, the parameters compressed need be decompressed, the decompressin
+g process need extra time.
+ Because this compression process don't change the structure of network,
+ the reduced time is very limited.
+\end_layout
+
+\begin_layout Standard
+Jonathan Long et.al
+\begin_inset CommandInset citation
+LatexCommand cite
+key "long2015fully"
+
+\end_inset
+
+ builded 
+\begin_inset Quotes eld
+\end_inset
+
+fully convolutional
+\begin_inset Quotes erd
+\end_inset
+
+ networks that take input of arbitrary size and produced correspondingly-sized
+ output.
+ More intro..
+\end_layout
+
+\begin_layout Section
+Our Model
+\end_layout
+
+\begin_layout Standard
+Our first contribution is replacing fc layer by conv layer.
+ conv layer only needs a few parameters because all conv kernels in the
+ same channel share weights.
+ If one can replce fc layer using conv layer, the total parameter of one
+ model will be reduced impressively.
+\end_layout
+
+\begin_layout Standard
+The second contribution is that we can take input of arbitrary size and
+ produce output of the same size.
+ To achieve the second contribution, if the dimension of the input in last
+ pooling layer is 
+\begin_inset Formula $(\text{batchsize},\text{in\_channels},\text{in\_width},\text{in\_height})$
+\end_inset
+
+, we define an avg pooling kernel with shape 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $(1,\text{in\_width},\text{in\_height},1)$
+\end_inset
+
+.
+ For each input, a vector with length 
+\begin_inset Formula $\text{in\_channels}$
+\end_inset
+
+is getted after the last avg pooling.
+ Need explain in more detail.
+\end_layout
+
+\begin_layout Subsection
+How can we replace fc layer by conv layer?
+\end_layout
+
+\begin_layout Enumerate
+We gather the output of last layer and reshape it to a vetor 
+\begin_inset Formula $v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+We permute this vector 
+\begin_inset Formula $v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+A conv operation is execused in the re-permuted vector 
+\begin_inset Formula $v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+These three steps can be applied arbitrary times and arbitrary layers in
+ a network.
+\end_layout
+
+\begin_layout Subsection
+Why can we replace?
+\end_layout
+
+\begin_layout Standard
+The important reson why we can do this operation is there are redundancy
+ information(???) in CNN.
+ That's why network pruning and weight sharing are possible.
+\end_layout
+
+\begin_layout Subsubsection
+fc layer
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+y_{o}=f(Wx_{i}+b)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ is the 
+\begin_inset Formula $n$
+\end_inset
+
+-dimensional vector, 
+\begin_inset Formula $y_{o}$
+\end_inset
+
+ is the m-dimensional vector, and
+\begin_inset Formula $W$
+\end_inset
+
+ is a 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ dimensional matrix.
+ If function 
+\begin_inset Formula $f$
+\end_inset
+
+ is bijective and 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $Rank(W)\ge n$
+\end_inset
+
+, there is no loss for any 
+\begin_inset Formula $x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $Rank(W)<n$
+\end_inset
+
+, there is some loss for given 
+\begin_inset Formula $x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For most conv layer, 
+\begin_inset Formula $Rank(W_{c})\ge n$
+\end_inset
+
+, where
+\begin_inset Formula $W_{c}$
+\end_inset
+
+ is generated through weights of conv layer.
+\end_layout
+
+\begin_layout Subsubsection
+The equlity of fc layer and conv layer(our operation)
+\end_layout
+
+\begin_layout Standard
+Han et.
+ al 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "han2015deep,han2015learning"
+
+\end_inset
+
+ compress network's parameter by pruning.
+ Based on their results, 80% parameters can be romoved, that means there
+ are about 20% nonzero elements in weights of fc layers.
+ 
+\end_layout
+
+\begin_layout Standard
+We can explain our process as follows: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+Wv & =h\\
+W'Pv & =h
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $W'P=W$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+For sake of simplicity, we assume there are only 
+\begin_inset Formula $m$
+\end_inset
+
+ nonzero elements in each row of 
+\begin_inset Formula $W$
+\end_inset
+
+.
+ We can generate a new weight matrix 
+\begin_inset Formula $W^{\prime}$
+\end_inset
+
+and a new data matrix 
+\begin_inset Formula $V$
+\end_inset
+
+, where each row of
+\begin_inset Formula $W^{\prime}$
+\end_inset
+
+is the nonzero elements of corresponding row of original weight matrix,
+ each column of 
+\begin_inset Formula $V$
+\end_inset
+
+ is the elements of corresponding positon of 
+\begin_inset Formula $v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+An example can be shown here.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Why we need a fc layer in a CNN
+\end_layout
+
+\begin_layout Standard
+The most important thing fc layer done is mix the informtion of differnt
+ block in an image.
+ This is necessary.
+ The advantage of conv can 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+一般认为人对外界的认知是从局部到全局的，而图像的空间联系也是局部的像素联系较为紧密，而距离较远的像素相关性则较弱。
+\end_layout
+
+\begin_layout Plain Layout
+只需要对局部进行感知，然后在更高层将局部的信息综合起来就得到了全局的信息
+\end_layout
+
+\begin_layout Plain Layout
+视觉皮层的神经元就是局部接受信息的（即这些神经元只响应某些特定区域的刺激）。如下图所示：左图为全连接，右图为局部连接。
+\end_layout
+
+\begin_layout Plain Layout
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+卷积神经网络对几何变换、形变、光照具有一定程度的不变性。Hubel-Wiesel结构基于Hubel和Wiesel关于猫的初级视皮层(VI区)的研究.
+\end_layout
+
+\begin_layout Plain Layout
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+输入的局部平移不变性：局部接受域、权值共享和子采样。
+\end_layout
+
+\begin_layout Plain Layout
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+conv 像素点的相关性，pool 放缩的不变形
+\end_layout
+
+\begin_layout Plain Layout
+仿射（翻转，缩放，平移，旋转，倾斜（shearing））
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+conv layer can only sense the local information, the global information
+ can't explain by conv layer.
+ That's why we need some fc layers in the top of CNN.
+\end_layout
+
+\begin_layout Subsection
+softmax
+\end_layout
+
+\begin_layout Standard
+Softmax is a linear classifier.
+ A complete process of classification is as follows:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+x\xrightarrow{F}z\xrightarrow{wz+b}s\xrightarrow{Softmax}y
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $F$
+\end_inset
+
+: a nonlinear function
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $wz+b$
+\end_inset
+
+: an affine transformation
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $Softmax$
+\end_inset
+
+: a linear classifier.
+ The classified rules is 
+\begin_inset Formula 
+\[
+l=\arg\max_{j}Softmax(s,j)
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $Softmax(s,j)=\frac{\exp{s_{j}}}{\sum_{i}\exp{s_{i}}}(s\in R^{n})$
+\end_inset
+
+.
+ This rules mean that the space 
+\begin_inset Formula $R^{n}$
+\end_inset
+
+ is divided into 
+\begin_inset Formula $C$
+\end_inset
+
+(the total of categories) parts.
+ The second step, 
+\begin_inset Formula $wz+b$
+\end_inset
+
+, is an affine transformation, it can't change the relative position of
+ each part(region).
+ Then, the goal of the nonlinear function 
+\begin_inset Formula $F$
+\end_inset
+
+ is mapping 
+\begin_inset Formula $x$
+\end_inset
+
+ to a right part(region).
+\end_layout
+
+\begin_layout Standard
+The first thing is that we can use
+\begin_inset Formula $C^{\prime}>C$
+\end_inset
+
+ in Softmax.
+ Through this operation, we could reduce the complexity of nonlinear function
+ 
+\begin_inset Formula $F$
+\end_inset
+
+.
+ For example:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+1，将C'类分为C组，每一组对应一个类别
+\end_layout
+
+\begin_layout Plain Layout
+2，例子是 异或 问题，一个两类的线性分类器是不能正确分类的，但是当做一个四类的问题就好解决了。
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The second thing we can do is utilizing the rate distortion theory.
+ Examine the function...
+ how to do it?
+\end_layout
+
+\begin_layout Standard
+We need to explain the following things.
+ Firstly, how can we map the new class to old class? Secondly, can this
+ method imporve the accuray of classification? If it can, how do we prove
+ it? Thirdly, what is the relationship between space 
+\begin_inset Formula $Z$
+\end_inset
+
+ and 
+\begin_inset Formula $S$
+\end_inset
+
+, expecially when the dimension of 
+\begin_inset Formula $Z$
+\end_inset
+
+ is larger than 
+\begin_inset Formula $S$
+\end_inset
+
+? There we should comply with one assumpation: all images are equally possible.
+ 
+\end_layout
+
+\begin_layout Section
+Experiments
+\end_layout
+
+\begin_layout Standard
+time cost, space cost, accurcy
+\end_layout
+
+\begin_layout Subsection
+MNIST
+\end_layout
+
+\begin_layout Standard
+MNIST is a handwritten digit data set.
+ It's divided by tow part, 60000 28x28 pixels training set and 10000 28x28
+ pixels testing set.
+ In this experiment, there is only one fc layer.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The result in MNIST
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:mnist_result"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+fc
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+conv
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+accurcy
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+98.0%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+99.2%
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+fc-layer:ratio
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.8
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+space
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+time
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+IMAGENET
+\end_layout
+
+\begin_layout Subsection
+FASTER RCNN
+\end_layout
+
+\begin_layout Section
+Discussion
+\end_layout
+
+\end_body
+\end_document
